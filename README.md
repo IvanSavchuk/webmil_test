@@ -1,24 +1,25 @@
-# README
+Створити сервіс для зручного зберігання і тегування цікавих лінків використовуючи Ruby On Rails. вимоги:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2 типи користувачів:
 
-Things you may want to cover:
+Адмін – має доступ до адміністративної панелі;
 
-* Ruby version
+Звичайний користувач – має доступ до списку збережених посилань і може додавати нові. До адміністративної панелі доступ закритий.
 
-* System dependencies
+Функціонал:
+Посилання. Користувач бачить список збережених лінків з коротким описом і заданими тегами(якщо їх немає потрібно показати відповідне повідомлення) і форму додавання нового лінку з такими полями: лінк(обов’язкове поле), теги(розділені комою) і опис;
+Фільтрування по тегах. окрема сторінка з списком всіх тегів які задав юзер. по кліку на тег відображаються лінки, які містять даний тег;
+мультиюзерність. будь який користувач повинен мати можливість зареєструватись і користуватись сервісом.
+адміністративна частина з списком всіх користувачів, тегів і збережених посилань.
 
-* Configuration
+База даних може бути довільна, плюсом буде використання mongodb+mongoid(http://mongoid.org).
 
-* Database creation
+Дизайн не грає ролі і не буде враховуватись при оцінці. але по бажанню можна використати getbootstrap(http://getbootstrap.com)
 
-* Database initialization
+gems:
+devise(https://github.com/plataformatec/devise) для авторизації rails_admin(https://github.com/sferik/rails_admin) для генерації адміністративної частини бонуси: simple_form(https://github.com/plataformatec/simple_form) для генерації форм haml(https://github.com/indirect/haml-rails) для фронтенду
 
-* How to run the test suite
+Додатково:
+можна написати тести з використанням rspec(https://github.com/rspec/rspec-rails)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+в результаті хочемо отримати лінк на репозиторій на github. додатковим бонусом буде лінк на робочий проект на heroku(https://www.heroku.com/ruby). зверніть увагу: якщо проект використовуватиме mongodb як базу, то на heroku потрібно використовувати цей плагін: https://elements.heroku.com/addons/mongolab
