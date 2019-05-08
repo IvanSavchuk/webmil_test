@@ -7,6 +7,7 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'rails_admin', '~> 1.4', '>= 1.4.2'
 gem 'simple_form', '~> 4.1'
 gem 'haml', '~> 5.0', '>= 5.0.4'
+gem 'mongoid', '~> 7.0', '>= 7.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
