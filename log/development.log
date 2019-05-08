@@ -238,3 +238,24 @@ Processing by HomeController#Index as HTML
 Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home/Index" for ::1 at 2019-05-08 11:44:25 +0300
+Processing by HomeController#Index as HTML
+  Rendering home/Index.html.erb within layouts/application
+  Rendered home/Index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1272ms (Views: 1249.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/Index" for ::1 at 2019-05-08 11:47:29 +0300
+Processing by HomeController#Index as HTML
+  Rendering home/Index.html.erb within layouts/application
+  Rendered home/Index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 106ms (Views: 101.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/Index" for ::1 at 2019-05-08 11:48:29 +0300
+Processing by HomeController#Index as HTML
+  Rendering home/Index.html.erb within layouts/application
+  Rendered home/Index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 101ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
