@@ -751,3 +751,399 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 1966ms (Views: 1944.4ms)
 
 
+Started GET "/" for ::1 at 2019-05-28 10:50:35 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (64.5ms)
+Completed 500 Internal Server Error in 112ms
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <h1>Hello, Ruby!</h1>
+    2: <p>This is Webmil test work!</p>
+    3: 
+    4: <%= simple_form_for @user do |f| %>
+    5:   <%= f.input :username %>
+    6:   <%= f.input :password %>
+    7:   <%= f.button :submit %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb___2369850781482387120_47218442318800'
+Started GET "/" for ::1 at 2019-05-28 10:53:19 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 942ms
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:   <%= simple_form_for @user do |f| %>
+    14:   <%= f.input :username %>
+    15:   <%= f.input :password %>
+    16:   <%= f.button :submit %>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__81021921003214012_46924590155360'
+Started GET "/" for ::1 at 2019-05-29 11:49:43 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 7782ms (Views: 7731.2ms)
+
+
+Started GET "/admin" for ::1 at 2019-05-29 11:50:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2019-05-29 11:50:14 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (725.2ms)
+Completed 200 OK in 845ms (Views: 807.7ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-05-29 11:50:21 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dppTKyYfcjAnlNpa7sIbbLQkkvuMrfroZ9NaLhsLh89Acva8AKRoDAoyvXwwG10XAh2URfQSq9lA1DnyAnsjNg==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x69951706171080 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x69951706100440 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-05-29 08:50:21 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.00648517>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x69951706042080 type=uuid data=0xae395b569fcf4fc8...>}}
+MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.049s
+Completed 401 Unauthorized in 560ms
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dppTKyYfcjAnlNpa7sIbbLQkkvuMrfroZ9NaLhsLh89Acva8AKRoDAoyvXwwG10XAh2URfQSq9lA1DnyAnsjNg==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 310ms (Views: 90.2ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-05-29 11:50:30 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (10.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (76.6ms)
+Completed 200 OK in 178ms (Views: 175.0ms)
+
+
+Started POST "/users" for ::1 at 2019-05-29 11:50:44 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LbVcpsGXwTjVDs8mFy9+opPl24LLVns5vO0Z3JyBs20bXfkx5yzbBPioqADJ9jjZJdzdPLPpKgib6noAhfEXlA==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x69951706042080 type=uuid data=0xae395b569fcf4fc8...>}}
+MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 439ms (Views: 133.9ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-05-29 11:50:49 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 138ms (Views: 135.1ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-05-29 11:50:56 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rzXza2d4ABXpqmTUSLtvHRJwh8gURaYBJTp2qEcbkqUZlGywAsadwbs/NRqLHZdRC8xtbMDt4WS+3NvbPV4IQg==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x69951706042080 type=uuid data=0xae395b569fcf4fc8...>}}
+MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 291ms
+
+
+Started GET "/" for ::1 at 2019-05-29 11:50:56 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 65ms (Views: 62.7ms)
+
+
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69951706042080 type=uuid data=0xae395b569fcf4fc8...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.002s
+Started GET "/" for ::1 at 2019-05-29 12:00:04 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+Started GET "/" for ::1 at 2019-05-29 12:00:13 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16023ms (Views: 16005.3ms)
+
+
+Completed 200 OK in 11906ms (Views: 11902.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 12:02:51 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 113ms (Views: 109.9ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-05-29 12:02:54 +0300
+Processing by Devise::RegistrationsController#new as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70079833614880 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70079833551860 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-05-29 09:02:55 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.006970243>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cebdeff2454651b2ad1c929')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
+MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 50ms
+
+
+Started GET "/" for ::1 at 2019-05-29 12:02:55 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 83ms (Views: 80.7ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 12:05:51 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 114ms (Views: 96.2ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2019-05-29 12:05:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_out" for ::1 at 2019-05-29 12:06:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-29 12:06:54 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 117ms (Views: 113.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-05-29 12:06:57 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xvrg+yVXLQuwtk5A3D5O3BYh2w1TDz3g1cfvEQOGchB3LtJMDQbSdws5ACG/4ESqZh2X3JJIH2rmdiWV6epWEw=="}
+MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cebdeff2454651b2ad1c929')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
+MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | my_db.update | STARTED | {"update"=>"users", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('5cebdeff2454651b2ad1c929')}, "u"=>{"$set"=>{"remember_created_at"=>nil}}, "multi"=>fal...
+MONGODB | localhost:27017 | my_db.update | SUCCEEDED | 0.002s
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms
+
+
+Started GET "/" for ::1 at 2019-05-29 12:06:57 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 75ms (Views: 72.6ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-05-29 12:07:00 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (78.8ms)
+Completed 200 OK in 174ms (Views: 161.4ms)
+
+
+Started POST "/users" for ::1 at 2019-05-29 12:07:11 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mIdx008SzMKfRCwMRkknS9Gkhb2NL35mr7NIvcvYkYzqCRGN7+xhXSXzPP/r/ozquw9ULmdwyBR5bpN6okCwag==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
+MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.002s
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 500ms (Views: 131.8ms)
+
+
+Started POST "/users" for ::1 at 2019-05-29 12:07:30 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o0WratJOzBsGVuW/bpzdjRLSNe3zem/DOuTHda0/F/qUuvqbYBsxbGiq5HU0Y/KpRp0DAcJX31JDbq5kT8dqGA==", "user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"test1@gmail.com"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
+MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | my_db.insert | STARTED | {"insert"=>"users", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}, "documents"=>[{"_id"=>BSON::ObjectId('5cee4bd32454650ebcbfb967'), "email"=>"test1@gmail.com", "encrypted_password"=>"$2a$11$74aS...
+MONGODB | localhost:27017 | my_db.insert | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 281ms
+
+
+Started GET "/" for ::1 at 2019-05-29 12:07:31 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 89ms (Views: 85.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-05-29 12:07:38 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sc6SBztndcvwbyl/t9U6xmBwsP9Ot+cwxAuclaUrg6CGMcP2iTKIvJ6TKLXtKhXiND+GE3+aV6G9gfWER9P+Qg=="}
+MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cee4bd32454650ebcbfb967')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
+MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms
+
+
+Started GET "/" for ::1 at 2019-05-29 12:07:38 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 88ms (Views: 85.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 12:08:52 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 78ms (Views: 75.9ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-05-29 12:08:55 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (95.7ms)
+Completed 200 OK in 181ms (Views: 178.4ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-05-29 12:09:02 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CqypWmOg5jycmUS6jIe14TlyOAEe66/8xrVuPxodGNdbhQpfWb6OhUE5YVhhqVgps2PoFLDHESdxji23xFC7dQ==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
+MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 262ms
+
+
+Started GET "/" for ::1 at 2019-05-29 12:09:02 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 64ms (Views: 62.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-05-29 12:09:06 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GDvRB0hvKfvQKg289nUWOn/hDuNMOccxvVeLz/zavxZswAVyWT2NgUpmr4IWuFh20H+vQ8q0Odkm8T3SnG7EKQ=="}
+MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cebdeff2454651b2ad1c929')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
+MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms
+
+
+Started GET "/" for ::1 at 2019-05-29 12:09:06 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 88ms (Views: 85.5ms)
+
+
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
