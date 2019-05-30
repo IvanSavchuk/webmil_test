@@ -3,7 +3,7 @@ class User
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable 
 
   ## Database authenticatable
   field :email,              type: String, default: ""
@@ -16,6 +16,8 @@ class User
   ## Rememberable
   field :remember_created_at, type: Time
 
+
+  field :admin, type: Boolean
   ## Trackable
   # field :sign_in_count,      type: Integer, default: 0
   # field :current_sign_in_at, type: Time
