@@ -1,10 +1,13 @@
 class User
   include Mongoid::Document
+  # add admin
+  field :admin, type: Boolean, default: false 
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
+  
   ## Database authenticatable
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
@@ -15,10 +18,14 @@ class User
 
   ## Rememberable
   field :remember_created_at, type: Time
-
-  field :admin, type: Boolean, default: false 
   
+  # add has meny posts
   has_many :posts
+
+  # add username
+  def username
+    return self.email.split('@')[0].capitalize
+  end
   ## Trackable
   # field :sign_in_count,      type: Integer, default: 0
   # field :current_sign_in_at, type: Time

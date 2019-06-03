@@ -8,8 +8,9 @@
   = @post.body
 %p
   %b User:
-  = @post.user.email.split('@')[0].capitalize
+  = @post.user.username
 
-= link_to 'Edit', edit_post_path(@post)
+- if current_user.admin
+  = link_to 'Edit', edit_post_path(@post)
 \|
 = link_to 'Back', posts_path
