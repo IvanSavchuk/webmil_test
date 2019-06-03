@@ -680,3 +680,1959 @@ Completed 200 OK in 94ms (Views: 75.8ms | MongoDB: 0.0ms)
 
 MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47023141604680 type=uuid data=0x09546bfb5a2d48be...>}]}
 MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/" for ::1 at 2019-06-03 16:10:43 +0300
+Processing by HomeController#index as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47439574020580 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47439573965140 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 13:10:43 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.014882607>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf512322454652475e3fdde')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47439573912740 type=uuid data=0x321f7d981b404058...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+Completed 401 Unauthorized in 115ms (MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-06-03 16:10:44 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 921ms (Views: 915.2ms | MongoDB: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-06-03 16:10:54 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ExWMeXabLHKPaR0IZl8s0muoErb4uwpyzWf0pWVLIw2COuY5VQg7zrGYe0dsbJqetT1DrMXhYdWdjkDbkQZHvg==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47439573912740 type=uuid data=0x321f7d981b404058...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 401 Unauthorized in 23ms (MongoDB: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ExWMeXabLHKPaR0IZl8s0muoErb4uwpyzWf0pWVLIw2COuY5VQg7zrGYe0dsbJqetT1DrMXhYdWdjkDbkQZHvg==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 321ms (Views: 89.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-06-03 16:10:56 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (11.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 140ms (Views: 137.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-06-03 16:11:07 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HzDaf87jIDzmtng+Hy3vWMpxHSk3WejPea4zfMgqTueRZPGMLOpcaNde/TTYE2uOtZkZGWAXN5Dcx7Q0Cod0xg==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x47439573912740 type=uuid data=0x321f7d981b404058...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47439573912740 type=uuid data=0x321f7d981b404058...>}, "documents"=>[{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc'), "email"=>"isavchuk99@gmail.com", "encrypted_password"=>"$2a$11...
+MONGODB | localhost:27017 | webmil_test_development.insert | SUCCEEDED | 0.180s
+Redirected to http://localhost:3000/
+Completed 302 Found in 467ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 16:11:07 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47439573912740 type=uuid data=0x321f7d981b404058...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 29ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    1: %h1 Home#index
+    2: 
+    3: <% if current_user %>
+    4:     <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+    5: <% else %>  
+    6:     <%= link_to 'Sign Up', new_user_registration_path %>
+    7:     <%= link_to 'Sign In', new_user_session_path %>
+  
+app/views/home/index.html.haml:4
+Started GET "/" for ::1 at 2019-06-03 16:12:46 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47439573912740 type=uuid data=0x321f7d981b404058...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 115ms (Views: 98.1ms | MongoDB: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-06-03 16:12:49 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"okYevx9ScDDwENPHl49b+dwJZs5fsp0SCaPCdZ1JM2kzaXT/PMFnjM7htYidvO21Apw31GLo9rVZSnYLaQRX2g=="}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47439573912740 type=uuid data=0x321f7d981b404058...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 65ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 16:12:49 +0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-06-03 16:12:49 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 89ms (Views: 86.7ms | MongoDB: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-06-03 16:12:56 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EW6QijK0fEM1bm87Pe0/0JquuC6Xq11Ab5LQSjNZVVfO/BGLgMk0B8zgdN0PrbBTmr8E8jIqGDu4A8NqAj164w==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47439573912740 type=uuid data=0x321f7d981b404058...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.166s
+Redirected to http://localhost:3000/
+Completed 302 Found in 450ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 16:12:56 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47439573912740 type=uuid data=0x321f7d981b404058...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 85ms (Views: 69.1ms | MongoDB: 0.0ms)
+
+
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47439573912740 type=uuid data=0x321f7d981b404058...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47365696278900 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47365696243840 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 13:19:51 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.011013237>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47365696219580 type=uuid data=0x55a207ad54a14d59...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.update | STARTED | {"update"=>"users", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47365696219580 type=uuid data=0x55a207ad54a14d59...>}, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "u"=>{"$set"=>{"admin"=>true}}, "multi"=>false, "upsert"=...
+MONGODB | localhost:27017 | webmil_test_development.update | SUCCEEDED | 0.041s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47365696219580 type=uuid data=0x55a207ad54a14d59...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/" for ::1 at 2019-06-03 16:24:59 +0300
+Processing by HomeController#index as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70147453097560 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70147218374240 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 13:24:59 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.007029042>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 10360ms (Views: 10303.4ms | MongoDB: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-06-03 16:25:13 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Z+QA4kzDJ5vC7rREqGFshBPbggzEIqmiN6qpuIPzoPR54+l2CPJCMA//scvIEw4j6wYaNzrx9pgjqfCBPPi3tQ=="}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+Redirected to http://localhost:3000/
+Completed 302 Found in 39ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 16:25:13 +0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 9ms (MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-06-03 16:25:13 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 142ms (Views: 137.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 16:25:19 +0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-06-03 16:25:19 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 141ms (Views: 136.6ms | MongoDB: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-06-03 16:25:31 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tLHDXIZbeeEsnYVSjGqfFsEiMZnre6IEMfiqQatCJJsRX7K51ycjvHpK3amO5m3h/K6BnqvZHt5KR+qYJQKAsA==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 313ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 16:25:31 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 81ms (Views: 69.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/p" for ::1 at 2019-06-03 16:25:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/p"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2019-06-03 16:25:52 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.012s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (25.3ms)
+Completed 200 OK in 173ms (Views: 126.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:25:56 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (43.8ms)
+  Rendered posts/new.html.haml within layouts/application (52.1ms)
+Completed 500 Internal Server Error in 80ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `macro' for #<Mongoid::Association::Embedded::EmbeddedIn:0x00007f98f7171c58>):
+     6:   .form-inputs
+     7:     = f.input :title
+     8:     = f.input :body
+     9:     = f.association :user
+    10: 
+    11:   .form-actions
+    12:     = f.button :submit
+  
+app/views/posts/_form.html.haml:9:in `block in _app_views_posts__form_html_haml__280082265352606585_70147385804620'
+app/views/posts/_form.html.haml:2:in `_app_views_posts__form_html_haml__280082265352606585_70147385804620'
+app/views/posts/new.html.haml:3:in `_app_views_posts_new_html_haml__3953651932224178233_70147385725680'
+Started GET "/posts" for ::1 at 2019-06-03 16:27:41 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.005s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (30.5ms)
+Completed 200 OK in 136ms (Views: 101.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 16:27:46 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 103ms (Views: 89.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 16:27:48 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 118ms (Views: 107.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:27:49 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (31.9ms)
+  Rendered posts/new.html.haml within layouts/application (40.4ms)
+Completed 500 Internal Server Error in 86ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `macro' for #<Mongoid::Association::Embedded::EmbeddedIn:0x00007f98f7171c58>):
+     6:   .form-inputs
+     7:     = f.input :title
+     8:     = f.input :body
+     9:     = f.association :user
+    10: 
+    11:   .form-actions
+    12:     = f.button :submit
+  
+app/views/posts/_form.html.haml:9:in `block in _app_views_posts__form_html_haml__280082265352606585_70147394253980'
+app/views/posts/_form.html.haml:2:in `_app_views_posts__form_html_haml__280082265352606585_70147394253980'
+app/views/posts/new.html.haml:3:in `_app_views_posts_new_html_haml__3953651932224178233_70147394296520'
+Started GET "/posts/new" for ::1 at 2019-06-03 16:30:07 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (24.1ms)
+  Rendered posts/new.html.haml within layouts/application (33.1ms)
+Completed 500 Internal Server Error in 86ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (Association :user not found):
+     6:   .form-inputs
+     7:     = f.input :title
+     8:     = f.input :body
+     9:     = f.association :user
+    10: 
+    11:   .form-actions
+    12:     = f.button :submit
+  
+app/views/posts/_form.html.haml:9:in `block in _app_views_posts__form_html_haml__280082265352606585_70147119889540'
+app/views/posts/_form.html.haml:2:in `_app_views_posts__form_html_haml__280082265352606585_70147119889540'
+app/views/posts/new.html.haml:3:in `_app_views_posts_new_html_haml__3953651932224178233_70147119941020'
+Started GET "/posts/" for ::1 at 2019-06-03 16:30:20 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 127ms (Views: 109.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:30:22 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (28.3ms)
+  Rendered posts/new.html.haml within layouts/application (35.2ms)
+Completed 500 Internal Server Error in 68ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (Association :user not found):
+     6:   .form-inputs
+     7:     = f.input :title
+     8:     = f.input :body
+     9:     = f.association :user
+    10: 
+    11:   .form-actions
+    12:     = f.button :submit
+  
+app/views/posts/_form.html.haml:9:in `block in _app_views_posts__form_html_haml__280082265352606585_70147478001720'
+app/views/posts/_form.html.haml:2:in `_app_views_posts__form_html_haml__280082265352606585_70147478001720'
+app/views/posts/new.html.haml:3:in `_app_views_posts_new_html_haml__3953651932224178233_70147478230080'
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70147218367320 type=uuid data=0x63c17b88741a45e0...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/posts/" for ::1 at 2019-06-03 16:32:22 +0300
+Processing by PostsController#index as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47250468749800 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47250468702240 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 13:32:22 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.063360686>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1262ms (Views: 1119.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 16:32:29 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 104ms (Views: 88.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 16:32:38 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 99ms (Views: 81.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 16:32:40 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 123ms (Views: 105.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 16:33:10 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 137ms (Views: 120.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:33:16 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 109ms (Views: 96.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:33:48 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 87ms (Views: 72.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:33:51 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 118ms (Views: 91.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:37:30 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 406 Not Acceptable in 268ms (MongoDB: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (PostsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+mongoid (7.0.3) lib/mongoid/railties/controller_runtime.rb:19:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2019-06-03 16:37:42 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 406 Not Acceptable in 86ms (MongoDB: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (PostsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+mongoid (7.0.3) lib/mongoid/railties/controller_runtime.rb:19:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/new" for ::1 at 2019-06-03 16:38:29 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 406 Not Acceptable in 256ms (MongoDB: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (PostsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+mongoid (7.0.3) lib/mongoid/railties/controller_runtime.rb:19:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47250468677620 type=uuid data=0x4c40456f0ae94438...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/posts/new" for ::1 at 2019-06-03 16:40:00 +0300
+Processing by PostsController#new as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x46944435525740 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x69962333318540 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 13:40:00 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.008157084>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46944435499420 type=uuid data=0x1f99f42f3e91495a...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+Completed 406 Not Acceptable in 288ms (MongoDB: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (PostsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+mongoid (7.0.3) lib/mongoid/railties/controller_runtime.rb:19:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2019-06-03 16:40:07 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46944435499420 type=uuid data=0x1f99f42f3e91495a...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 406 Not Acceptable in 95ms (MongoDB: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (PostsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+mongoid (7.0.3) lib/mongoid/railties/controller_runtime.rb:19:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x46944435499420 type=uuid data=0x1f99f42f3e91495a...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/posts" for ::1 at 2019-06-03 16:41:25 +0300
+Processing by PostsController#index as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70112925583380 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70112925610900 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 13:41:25 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.005872697>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47077198747740 type=uuid data=0x87959129c9704fd6...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 1271ms (Views: 1184.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:41:29 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47077198747740 type=uuid data=0x87959129c9704fd6...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (84.9ms)
+  Rendered posts/new.html.haml within layouts/application (94.9ms)
+Completed 500 Internal Server Error in 127ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `macro' for #<Mongoid::Association::Embedded::EmbeddedIn:0x00007f88e03622a0>):
+     6:   .form-inputs
+     7:     = f.input :title
+     8:     = f.input :body
+     9:     = f.association :user
+    10: 
+    11:   .form-actions
+    12:     = f.button :submit
+  
+app/views/posts/_form.html.haml:9:in `block in _app_views_posts__form_html_haml___2716304500410811757_70112939949240'
+app/views/posts/_form.html.haml:2:in `_app_views_posts__form_html_haml___2716304500410811757_70112939949240'
+app/views/posts/new.html.haml:3:in `_app_views_posts_new_html_haml__2463005859466679175_70112939194180'
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47077198747740 type=uuid data=0x87959129c9704fd6...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/posts/new" for ::1 at 2019-06-03 16:44:27 +0300
+  
+SyntaxError (/home/ivan-devops/Project/webmil_test/app/controllers/posts_controller.rb:17: formal argument cannot be an instance variable
+    new @post = Post.new 
+        ^~~~~):
+  
+app/controllers/posts_controller.rb:17: formal argument cannot be an instance variable
+Started GET "/posts" for ::1 at 2019-06-03 16:44:34 +0300
+  
+SyntaxError (/home/ivan-devops/Project/webmil_test/app/controllers/posts_controller.rb:17: formal argument cannot be an instance variable
+    new @post = Post.new 
+        ^~~~~):
+  
+app/controllers/posts_controller.rb:17: formal argument cannot be an instance variable
+Started GET "/posts" for ::1 at 2019-06-03 16:46:28 +0300
+Processing by PostsController#index as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70300998172780 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70300998200080 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 13:46:28 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.006507278>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47179341565580 type=uuid data=0xf600507e11a54ce6...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 2504ms (Views: 2407.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:46:32 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47179341565580 type=uuid data=0xf600507e11a54ce6...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (90.2ms)
+  Rendered posts/new.html.haml within layouts/application (102.9ms)
+Completed 500 Internal Server Error in 145ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `macro' for #<Mongoid::Association::Embedded::EmbeddedIn:0x00007fe0743588b8>):
+     6:   .form-inputs
+     7:     = f.input :title
+     8:     = f.input :body
+     9:     = f.association :user
+    10: 
+    11:   .form-actions
+    12:     = f.button :submit
+  
+app/views/posts/_form.html.haml:9:in `block in _app_views_posts__form_html_haml___4481241921207609398_70301012257840'
+app/views/posts/_form.html.haml:2:in `_app_views_posts__form_html_haml___4481241921207609398_70301012257840'
+app/views/posts/new.html.haml:3:in `_app_views_posts_new_html_haml__2295371420478567069_70301011819300'
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47179341565580 type=uuid data=0xf600507e11a54ce6...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/posts" for ::1 at 2019-06-03 16:51:28 +0300
+  
+ActionController::RoutingError (undefined local variable or method `expect' for PostsController:Class
+Did you mean?  exec):
+  
+app/controllers/posts_controller.rb:3:in `<class:PostsController>'
+app/controllers/posts_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2019-06-03 16:51:30 +0300
+Processing by HomeController#index as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47129183165220 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47129183078360 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 13:51:30 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.017892403>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1258ms (Views: 1200.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 16:52:02 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.050s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 185ms (Views: 107.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:52:06 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (56.0ms)
+  Rendered posts/new.html.haml within layouts/application (64.9ms)
+Completed 500 Internal Server Error in 96ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `macro' for #<Mongoid::Association::Embedded::EmbeddedIn:0x00007fa45c2455b0>):
+     6:   .form-inputs
+     7:     = f.input :title
+     8:     = f.input :body
+     9:     = f.association :user
+    10: 
+    11:   .form-actions
+    12:     = f.button :submit
+  
+app/views/posts/_form.html.haml:9:in `block in _app_views_posts__form_html_haml___1728119317992202659_70171798126520'
+app/views/posts/_form.html.haml:2:in `_app_views_posts__form_html_haml___1728119317992202659_70171798126520'
+app/views/posts/new.html.haml:3:in `_app_views_posts_new_html_haml__3696502683505830440_70171798481660'
+Started GET "/posts/new" for ::1 at 2019-06-03 16:52:55 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (30.7ms)
+  Rendered posts/new.html.haml within layouts/application (39.0ms)
+Completed 200 OK in 163ms (Views: 119.0ms | MongoDB: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-03 16:53:08 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VcV+UxkSYtmSlWAqlpqI3/4TvJU0qmvn0qpgPoachr2QARuKjksTLz1GWQZ1eBIb8IQwSSIuTu2u4ozWyiYRIA==", "post"=>{"title"=>"Hello", "body"=>"     = f.association :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 18ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `-' for nil:NilClass):
+  
+app/controllers/posts_controller.rb:28:in `create'
+Started POST "/posts" for ::1 at 2019-06-03 16:53:47 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VcV+UxkSYtmSlWAqlpqI3/4TvJU0qmvn0qpgPoachr2QARuKjksTLz1GWQZ1eBIb8IQwSSIuTu2u4ozWyiYRIA==", "post"=>{"title"=>"Hello", "body"=>"     = f.association :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+Completed 500 Internal Server Error in 40ms (MongoDB: 0.0ms)
+
+
+  
+Mongoid::Errors::InvalidPath (
+message:
+  Having a root path assigned for Post is invalid.
+summary:
+  Mongoid has two different path objects for determining the location of a document in the database, Root and Embedded. This error is raised when an embedded document somehow gets a root path assigned.
+resolution:
+  Most likely your embedded model, Post is also referenced via a has_many from a root document in another collection. Double check the relation definitions and fix any instances where embedded documents are improperly referenced from other collections.):
+  
+app/controllers/posts_controller.rb:30:in `block in create'
+app/controllers/posts_controller.rb:29:in `create'
+Started GET "/posts" for ::1 at 2019-06-03 16:53:54 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 112ms (Views: 93.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 16:53:56 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.013s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (88.2ms)
+  Rendered posts/new.html.haml within layouts/application (128.6ms)
+Completed 200 OK in 403ms (Views: 294.9ms | MongoDB: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-03 16:54:03 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lTcE8wiSAdNwPWZ6xwdbMzBUXsvwBnUrxHHlq+jz9QSK36ddC3xTgDV8mV78DFdsLyTSyT0QvkW93asYmcaERA==", "post"=>{"title"=>"Hello", "body"=>"     = f.association :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 18ms (MongoDB: 0.0ms)
+
+
+  
+Mongoid::Errors::InvalidPath (
+message:
+  Having a root path assigned for Post is invalid.
+summary:
+  Mongoid has two different path objects for determining the location of a document in the database, Root and Embedded. This error is raised when an embedded document somehow gets a root path assigned.
+resolution:
+  Most likely your embedded model, Post is also referenced via a has_many from a root document in another collection. Double check the relation definitions and fix any instances where embedded documents are improperly referenced from other collections.):
+  
+app/controllers/posts_controller.rb:30:in `block in create'
+app/controllers/posts_controller.rb:29:in `create'
+Started POST "/posts" for ::1 at 2019-06-03 16:57:46 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lTcE8wiSAdNwPWZ6xwdbMzBUXsvwBnUrxHHlq+jz9QSK36ddC3xTgDV8mV78DFdsLyTSyT0QvkW93asYmcaERA==", "post"=>{"title"=>"Hello", "body"=>"     = f.association :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+Completed 500 Internal Server Error in 53ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user=' for #<Post:0x00007fa448f00ca0>
+Did you mean?  users=
+               users
+               users?
+               upsert):
+  
+app/controllers/posts_controller.rb:28:in `create'
+Started GET "/" for ::1 at 2019-06-03 16:59:25 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 110ms (Views: 97.5ms | MongoDB: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-06-03 16:59:27 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U7zecmJ08KX1gHM9p0bWxQSUmUP0ZzjNAyozlr0Pcd2WeLur9S2BU1pTShFEpEwBCgMVn+LjHcd/Yt9+8bXmQA=="}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 16:59:27 +0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 9ms (MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-06-03 16:59:27 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 185ms (Views: 166.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/home/Index" for ::1 at 2019-06-03 16:59:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/Index"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-06-03 16:59:52 +0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-06-03 16:59:52 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 135ms (Views: 130.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-06-03 16:59:54 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 140ms (Views: 136.8ms | MongoDB: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-06-03 17:00:04 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sFF+kuPXZuCsknZ/E59qDjrqENI9Gd80RASMOA973GxiP2lDBXyA2fk3elV1zUaYHF120bEaPERy5HSDJcNukg==", "user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"test1@gmail.com"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.019s
+MONGODB | localhost:27017 | webmil_test_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}, "documents"=>[{"_id"=>BSON::ObjectId('5cf527e424546537599423d7'), "email"=>"test1@gmail.com", "encrypted_password"=>"$2a$11$4I/3...
+MONGODB | localhost:27017 | webmil_test_development.insert | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 346ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 17:00:04 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 104ms (Views: 91.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:00:06 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 154ms (Views: 136.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 17:00:07 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (39.2ms)
+  Rendered posts/new.html.haml within layouts/application (56.9ms)
+Completed 200 OK in 173ms (Views: 154.5ms | MongoDB: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-03 17:00:12 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LXbstIdQDRZm5RF4WW9ceBugnoktPm8vMkrqbvbi3Y2O0b3lK2r1cTjOmErDURqh2aHBd4hv8VovpE4zPO7n2A==", "post"=>{"title"=>"Hello", "body"=>"     = f.association :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 36ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user=' for #<Post:0x00007fa44a12dbf8>
+Did you mean?  users=
+               users
+               users?
+               upsert):
+  
+app/controllers/posts_controller.rb:28:in `create'
+Started POST "/posts" for ::1 at 2019-06-03 17:02:23 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LXbstIdQDRZm5RF4WW9ceBugnoktPm8vMkrqbvbi3Y2O0b3lK2r1cTjOmErDURqh2aHBd4hv8VovpE4zPO7n2A==", "post"=>{"title"=>"Hello", "body"=>"     = f.association :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 64ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user=' for #<Post:0x00007fa44a3f7cf8>
+Did you mean?  users=
+               users
+               users?
+               upsert):
+  
+app/controllers/posts_controller.rb:28:in `create'
+Started GET "/" for ::1 at 2019-06-03 17:02:31 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 140ms (Views: 122.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:02:33 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (18.1ms)
+Completed 200 OK in 176ms (Views: 154.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 17:02:34 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.010s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (27.8ms)
+  Rendered posts/new.html.haml within layouts/application (37.6ms)
+Completed 200 OK in 150ms (Views: 127.9ms | MongoDB: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-03 17:02:40 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gAoOEs/wMoQW5q4uxmcX4nJoS7ZCHLwXcy5b/LCH78sjrV9DY8rK40jNJxxcWVE7sGkUSOdNImJuwP+heovVng==", "post"=>{"title"=>"1111", "body"=>"1111"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 38ms (MongoDB: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user=' for #<Post:0x00007fa44a03c898>
+Did you mean?  users=
+               users
+               users?
+               upsert):
+  
+app/controllers/posts_controller.rb:28:in `create'
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47129182981880 type=uuid data=0x93bac2b4bc894a99...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/" for ::1 at 2019-06-03 17:03:17 +0300
+Processing by HomeController#index as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x46960687917140 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x46960687839020 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 14:03:17 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.007493075>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 1168ms (Views: 1085.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:03:20 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.006s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 148ms (Views: 103.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 17:03:22 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (43.5ms)
+  Rendered posts/new.html.haml within layouts/application (55.6ms)
+Completed 200 OK in 166ms (Views: 143.6ms | MongoDB: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-03 17:03:26 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mjkMXCdQIjl4aaypvT3O+SiySINANekhu8mRIMxi8U85nl0Ni2raXiZCJZsnA4gg6rMXfeVkd1SmJzV9Bm7LGg==", "post"=>{"title"=>"Hello", "body"=>"     = f.association :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.012s
+Completed 500 Internal Server Error in 57ms (MongoDB: 0.0ms)
+
+
+  
+Mongoid::Errors::InvalidPath (
+message:
+  Having a root path assigned for Post is invalid.
+summary:
+  Mongoid has two different path objects for determining the location of a document in the database, Root and Embedded. This error is raised when an embedded document somehow gets a root path assigned.
+resolution:
+  Most likely your embedded model, Post is also referenced via a has_many from a root document in another collection. Double check the relation definitions and fix any instances where embedded documents are improperly referenced from other collections.):
+  
+app/controllers/posts_controller.rb:30:in `block in create'
+app/controllers/posts_controller.rb:29:in `create'
+Started GET "/posts/new" for ::1 at 2019-06-03 17:04:42 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (32.7ms)
+  Rendered posts/new.html.haml within layouts/application (38.8ms)
+Completed 500 Internal Server Error in 79ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `macro' for #<Mongoid::Association::Embedded::EmbeddedIn:0x00007f3aa1924ec8>):
+     6:   .form-inputs
+     7:     = f.input :title
+     8:     = f.input :body
+     9:     = f.association :user
+    10: 
+    11:   .form-actions
+    12:     = f.button :submit
+  
+app/views/posts/_form.html.haml:9:in `block in _app_views_posts__form_html_haml___3728200801470157773_69944900696680'
+app/views/posts/_form.html.haml:2:in `_app_views_posts__form_html_haml___3728200801470157773_69944900696680'
+app/views/posts/new.html.haml:3:in `_app_views_posts_new_html_haml___2215293406520647214_69944901552480'
+Started GET "/posts/new" for ::1 at 2019-06-03 17:04:50 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.005s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (26.5ms)
+  Rendered posts/new.html.haml within layouts/application (41.1ms)
+Completed 200 OK in 144ms (Views: 127.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 17:05:38 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (24.4ms)
+  Rendered posts/new.html.haml within layouts/application (31.3ms)
+Completed 200 OK in 162ms (Views: 110.6ms | MongoDB: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-03 17:05:44 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7dto11+h4hY0LiizxrhtRx0zPo3/Tn3yOhclpxDUkfDnNh9YklMUDWIWuinjkdwGLq8VFGJYsyKv1Ni4xnQ2oA==", "post"=>{"title"=>"Hello", "body"=>"     = f.association :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+Completed 500 Internal Server Error in 16ms (MongoDB: 0.0ms)
+
+
+  
+Mongoid::Errors::InvalidPath (
+message:
+  Having a root path assigned for Post is invalid.
+summary:
+  Mongoid has two different path objects for determining the location of a document in the database, Root and Embedded. This error is raised when an embedded document somehow gets a root path assigned.
+resolution:
+  Most likely your embedded model, Post is also referenced via a has_many from a root document in another collection. Double check the relation definitions and fix any instances where embedded documents are improperly referenced from other collections.):
+  
+app/controllers/posts_controller.rb:30:in `block in create'
+app/controllers/posts_controller.rb:29:in `create'
+Started POST "/posts" for ::1 at 2019-06-03 17:06:37 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7dto11+h4hY0LiizxrhtRx0zPo3/Tn3yOhclpxDUkfDnNh9YklMUDWIWuinjkdwGLq8VFGJYsyKv1Ni4xnQ2oA==", "post"=>{"title"=>"Hello", "body"=>"     = f.association :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 18ms (MongoDB: 0.0ms)
+
+
+  
+Mongoid::Errors::InvalidPath (
+message:
+  Having a root path assigned for Post is invalid.
+summary:
+  Mongoid has two different path objects for determining the location of a document in the database, Root and Embedded. This error is raised when an embedded document somehow gets a root path assigned.
+resolution:
+  Most likely your embedded model, Post is also referenced via a has_many from a root document in another collection. Double check the relation definitions and fix any instances where embedded documents are improperly referenced from other collections.):
+  
+app/controllers/posts_controller.rb:30:in `block in create'
+app/controllers/posts_controller.rb:29:in `create'
+Started GET "/posts" for ::1 at 2019-06-03 17:06:41 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 130ms (Views: 109.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 17:06:43 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (36.5ms)
+  Rendered posts/new.html.haml within layouts/application (49.0ms)
+Completed 500 Internal Server Error in 76ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `macro' for #<Mongoid::Association::Embedded::EmbeddedIn:0x00007f3a8818c9b8>):
+     6:   .form-inputs
+     7:     = f.input :title
+     8:     = f.input :body
+     9:     = f.association :user
+    10: 
+    11:   .form-actions
+    12:     = f.button :submit
+  
+app/views/posts/_form.html.haml:9:in `block in _app_views_posts__form_html_haml___3728200801470157773_69944896629400'
+app/views/posts/_form.html.haml:2:in `_app_views_posts__form_html_haml___3728200801470157773_69944896629400'
+app/views/posts/new.html.haml:3:in `_app_views_posts_new_html_haml___2215293406520647214_69944896982060'
+Started GET "/posts/new" for ::1 at 2019-06-03 17:06:53 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (53.7ms)
+  Rendered posts/new.html.haml within layouts/application (61.7ms)
+Completed 200 OK in 164ms (Views: 144.9ms | MongoDB: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-03 17:06:58 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x62JHvTA3yTsIP+xphtLe03JK9wo/tqB7zaCTKytzvjNQP6ROTIpP7oYbSuDMvo6flUARbXoFFF69X9Teg1pqA==", "post"=>{"title"=>"Hello", "body"=>"     = f.association :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 19ms (MongoDB: 0.0ms)
+
+
+  
+Mongoid::Errors::InvalidPath (
+message:
+  Having a root path assigned for Post is invalid.
+summary:
+  Mongoid has two different path objects for determining the location of a document in the database, Root and Embedded. This error is raised when an embedded document somehow gets a root path assigned.
+resolution:
+  Most likely your embedded model, Post is also referenced via a has_many from a root document in another collection. Double check the relation definitions and fix any instances where embedded documents are improperly referenced from other collections.):
+  
+app/controllers/posts_controller.rb:30:in `block in create'
+app/controllers/posts_controller.rb:29:in `create'
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x46960687830740 type=uuid data=0x8b197487d472427f...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/" for ::1 at 2019-06-03 17:07:47 +0300
+Processing by HomeController#index as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70223051232680 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47290846367740 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 14:07:47 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.005291182>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 991ms (Views: 911.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:07:50 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.038s
+  Rendered posts/index.html.haml within layouts/application (83.8ms)
+Completed 200 OK in 289ms (Views: 219.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 17:07:52 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (54.1ms)
+  Rendered posts/new.html.haml within layouts/application (63.8ms)
+Completed 200 OK in 179ms (Views: 162.5ms | MongoDB: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-03 17:07:59 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1fY3OMpWKopCykOXij3GbpjmldcGJ6S1c4Y5qr1l3PJ2UWZpZmzS7RzhyqUQA4C3WufKKaN2OsBuaJ33d2nmpw==", "post"=>{"title"=>"Hellogg", "body"=>"     = f.assohhciation :user"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.005s
+MONGODB | localhost:27017 | webmil_test_development.insert | STARTED | {"insert"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}, "documents"=>[{"_id"=>BSON::ObjectId('5cf529bf2454653b05c810d7'), "title"=>"Hellogg", "body"=>"     = f.assohhciation :user", "u...
+MONGODB | localhost:27017 | webmil_test_development.insert | SUCCEEDED | 0.228s
+Redirected to http://localhost:3000/posts/5cf529bf2454653b05c810d7
+Completed 302 Found in 320ms (MongoDB: 0.2ms)
+
+
+Started GET "/posts/5cf529bf2454653b05c810d7" for ::1 at 2019-06-03 17:07:59 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf529bf2454653b05c810d7"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf529bf2454653b05c810d7')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendered posts/show.html.haml within layouts/application (40.9ms)
+Completed 200 OK in 251ms (Views: 197.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf529bf2454653b05c810d7/edit" for ::1 at 2019-06-03 17:08:12 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5cf529bf2454653b05c810d7"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf529bf2454653b05c810d7')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (32.2ms)
+  Rendered posts/edit.html.haml within layouts/application (42.1ms)
+Completed 200 OK in 207ms (Views: 150.9ms | MongoDB: 0.0ms)
+
+
+Started PATCH "/posts/5cf529bf2454653b05c810d7" for ::1 at 2019-06-03 17:08:21 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sg1XpNwVxdRBiLjq3Isqxpr0oqJTJhJYk0X5SzAVFwly+b7arwCLYL0r1mfKT1oQIIxc7J/DhvatkiR9nS0bHA==", "post"=>{"title"=>"Test 1", "body"=>"test 1"}, "commit"=>"Update Post", "id"=>"5cf529bf2454653b05c810d7"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf529bf2454653b05c810d7')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.update | STARTED | {"update"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('5cf529bf2454653b05c810d7')}, "u"=>{"$set"=>{"title"=>"Test 1", "body"=>"test 1"}}, "mu...
+MONGODB | localhost:27017 | webmil_test_development.update | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts/5cf529bf2454653b05c810d7
+Completed 302 Found in 85ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf529bf2454653b05c810d7" for ::1 at 2019-06-03 17:08:21 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf529bf2454653b05c810d7"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf529bf2454653b05c810d7')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (23.9ms)
+Completed 200 OK in 158ms (Views: 120.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf529bf2454653b05c810d7" for ::1 at 2019-06-03 17:10:50 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf529bf2454653b05c810d7"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf529bf2454653b05c810d7')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.005s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 152ms (Views: 114.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/" for ::1 at 2019-06-03 17:10:56 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (35.6ms)
+Completed 200 OK in 165ms (Views: 131.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf529bf2454653b05c810d7" for ::1 at 2019-06-03 17:11:06 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf529bf2454653b05c810d7"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf529bf2454653b05c810d7')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (18.7ms)
+Completed 200 OK in 136ms (Views: 117.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:11:09 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.005s
+  Rendered posts/index.html.haml within layouts/application (40.6ms)
+Completed 200 OK in 149ms (Views: 128.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:11:23 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (33.2ms)
+Completed 200 OK in 136ms (Views: 120.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 17:12:00 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 96ms (Views: 81.2ms | MongoDB: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-06-03 17:12:02 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"P5f9JawkGsjpnWKC0q3eUyvQVRO6YKOGnbQBzdl4E1o1eoqqYdbs07+l8Bj3hG8SGEx+iid2bVYId/zSD9i0Cg=="}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 17:12:02 +0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 9ms (MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-06-03 17:12:02 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 141ms (Views: 135.1ms | MongoDB: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-06-03 17:12:09 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4/tCDCV6fU7ygjw5vsouZoqBwuRGJ5UjzxzC7AaGjLR/cn63IUq0LIGv0/LzbmqjKE4UQ6OhPpYnwW4rpytMg==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 311ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 17:12:10 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 104ms (Views: 91.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:12:12 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (45.2ms)
+Completed 200 OK in 142ms (Views: 122.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-03 17:12:13 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.007s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (32.9ms)
+  Rendered posts/new.html.haml within layouts/application (43.8ms)
+Completed 200 OK in 155ms (Views: 134.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-03 17:12:26 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P7h5a/kQJRul3rexZHDhVo8JCJmUKopUbKyIwamh0PfsH7bVmA2EAnJpudGXzZpOfYFPGgJAYVhcr91FB/zJnw==", "post"=>{"title"=>"Hello", "body"=>"Admin"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.insert | STARTED | {"insert"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}, "documents"=>[{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8'), "title"=>"Hello", "body"=>"Admin", "user_id"=>BSON::ObjectId('...
+MONGODB | localhost:27017 | webmil_test_development.insert | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts/5cf52aca2454653b05c810d8
+Completed 302 Found in 33ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-03 17:12:26 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendered posts/show.html.haml within layouts/application (22.0ms)
+Completed 200 OK in 128ms (Views: 104.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:12:28 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (49.4ms)
+Completed 200 OK in 172ms (Views: 151.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8/edit" for ::1 at 2019-06-03 17:12:33 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (29.8ms)
+  Rendered posts/edit.html.haml within layouts/application (43.0ms)
+Completed 200 OK in 172ms (Views: 134.0ms | MongoDB: 0.0ms)
+
+
+Started PATCH "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-03 17:12:48 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7P28t9VgqvIYI9FvtEuuWqZ1g2eilwsEoK9E3cfYvt4KTGhE8+VpR3Uq3Uy4PKHCLXx+H28MmM19n1GMwPeC+g==", "post"=>{"title"=>"Hello!", "body"=>"I am admin!"}, "commit"=>"Update Post", "id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.update | STARTED | {"update"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "u"=>{"$set"=>{"title"=>"Hello!", "body"=>"I am admin!"}}...
+MONGODB | localhost:27017 | webmil_test_development.update | SUCCEEDED | 0.004s
+Redirected to http://localhost:3000/posts/5cf52aca2454653b05c810d8
+Completed 302 Found in 54ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-03 17:12:48 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (28.0ms)
+Completed 200 OK in 170ms (Views: 143.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:12:50 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (55.9ms)
+Completed 200 OK in 149ms (Views: 132.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:15:19 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (42.6ms)
+Completed 200 OK in 145ms (Views: 125.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-03 17:15:27 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (22.5ms)
+Completed 200 OK in 132ms (Views: 110.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-03 17:15:30 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.006s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (57.6ms)
+Completed 200 OK in 166ms (Views: 148.3ms | MongoDB: 0.0ms)
+
+
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70222749388940 type=uuid data=0xc745bd49605e4a3d...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
