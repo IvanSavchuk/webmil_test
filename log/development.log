@@ -1,802 +1,6 @@
-Started GET "/" for ::1 at 2019-05-07 13:40:44 +0300
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (9.3ms)
-Completed 200 OK in 46ms (Views: 23.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2019-05-08 10:40:43 +0300
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (17.2ms)
-Completed 200 OK in 136ms (Views: 85.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2019-05-08 11:02:02 +0300
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (8.9ms)
-Completed 200 OK in 84ms (Views: 59.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2019-05-08 11:13:38 +0300
+Started GET "/users/sign_in" for ::1 at 2019-06-03 15:00:03 +0300
   
-ActionController::RoutingError (uninitialized constant MainController):
-  
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
-remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
-warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
-warden (1.2.8) lib/warden/manager.rb:34:in `catch'
-warden (1.2.8) lib/warden/manager.rb:34:in `call'
-rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.7) lib/rack/etag.rb:25:in `call'
-rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.7) lib/rack/head.rb:12:in `call'
-actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-05-08 11:17:48 +0300
-  
-ActionController::RoutingError (uninitialized constant MainController):
-  
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
-remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
-warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
-warden (1.2.8) lib/warden/manager.rb:34:in `catch'
-warden (1.2.8) lib/warden/manager.rb:34:in `call'
-rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.7) lib/rack/etag.rb:25:in `call'
-rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.7) lib/rack/head.rb:12:in `call'
-actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-05-08 11:28:38 +0300
-  
-ActionController::RoutingError (uninitialized constant MainController):
-  
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
-remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
-warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
-warden (1.2.8) lib/warden/manager.rb:34:in `catch'
-warden (1.2.8) lib/warden/manager.rb:34:in `call'
-rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.7) lib/rack/etag.rb:25:in `call'
-rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.7) lib/rack/head.rb:12:in `call'
-actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/home/Index" for ::1 at 2019-05-08 11:29:02 +0300
-Processing by HomeController#Index as HTML
-  Rendering home/Index.html.erb
-  Rendered home/Index.html.erb (0.8ms)
-Completed 200 OK in 16ms (Views: 9.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home/Index" for ::1 at 2019-05-08 11:29:23 +0300
-Processing by HomeController#Index as HTML
-  Rendering home/Index.html.erb within layouts/application
-  Rendered home/Index.html.erb within layouts/application (0.8ms)
-Completed 200 OK in 25520ms (Views: 25517.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home/Index" for ::1 at 2019-05-08 11:35:34 +0300
-Processing by HomeController#Index as HTML
-  Rendering home/Index.html.erb within layouts/application
-  Rendered home/Index.html.erb within layouts/application (1.1ms)
-Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home/Index" for ::1 at 2019-05-08 11:44:25 +0300
-Processing by HomeController#Index as HTML
-  Rendering home/Index.html.erb within layouts/application
-  Rendered home/Index.html.erb within layouts/application (2.0ms)
-Completed 200 OK in 1272ms (Views: 1249.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home/Index" for ::1 at 2019-05-08 11:47:29 +0300
-Processing by HomeController#Index as HTML
-  Rendering home/Index.html.erb within layouts/application
-  Rendered home/Index.html.erb within layouts/application (0.8ms)
-Completed 200 OK in 106ms (Views: 101.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home/Index" for ::1 at 2019-05-08 11:48:29 +0300
-Processing by HomeController#Index as HTML
-  Rendering home/Index.html.erb within layouts/application
-  Rendered home/Index.html.erb within layouts/application (0.8ms)
-Completed 200 OK in 101ms (Views: 97.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2019-05-15 11:38:10 +0300
-  
-ActionController::RoutingError (uninitialized constant MainController):
-  
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
-remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
-warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
-warden (1.2.8) lib/warden/manager.rb:34:in `catch'
-warden (1.2.8) lib/warden/manager.rb:34:in `call'
-rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.7) lib/rack/etag.rb:25:in `call'
-rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.7) lib/rack/head.rb:12:in `call'
-actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/home/Index" for ::1 at 2019-05-15 11:38:23 +0300
-Processing by HomeController#Index as HTML
-  Rendering home/Index.html.erb within layouts/application
-  Rendered home/Index.html.erb within layouts/application (0.8ms)
-Completed 500 Internal Server Error in 10995ms
-
-
-  
-ActionView::Template::Error (couldn't find file 'activestorage' with type 'application/javascript'
-Checked in these paths: 
-  /home/ivan-devops/Project/webmil_test/app/assets/config
-  /home/ivan-devops/Project/webmil_test/app/assets/images
-  /home/ivan-devops/Project/webmil_test/app/assets/javascripts
-  /home/ivan-devops/Project/webmil_test/app/assets/stylesheets
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/assets/images
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/assets/stylesheets
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/vendor/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/vendor/assets/stylesheets
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/remotipart-1.4.2/vendor/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/nested_form-0.3.2/vendor/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/jquery-ui-rails-6.0.1/app/assets/images
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/jquery-ui-rails-6.0.1/app/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/jquery-ui-rails-6.0.1/app/assets/stylesheets
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.5/app/assets/fonts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.5/app/assets/stylesheets
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
-  /home/ivan-devops/Project/webmil_test/node_modules):
-     5:     <%= csrf_meta_tags %>
-     6:     <%= csp_meta_tag %>
-     7: 
-     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    10:   </head>
-    11: 
-  
-app/assets/javascripts/application.js:14
-app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4506233514528490364_70037899664360'
-Started GET "/" for ::1 at 2019-05-15 11:38:58 +0300
-  
-ActionController::RoutingError (uninitialized constant MainController):
-  
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
-remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
-warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
-warden (1.2.8) lib/warden/manager.rb:34:in `catch'
-warden (1.2.8) lib/warden/manager.rb:34:in `call'
-rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.7) lib/rack/etag.rb:25:in `call'
-rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.7) lib/rack/head.rb:12:in `call'
-actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-05-15 11:39:10 +0300
-  
-ActionController::RoutingError (uninitialized constant MainController):
-  
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
-remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
-warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
-warden (1.2.8) lib/warden/manager.rb:34:in `catch'
-warden (1.2.8) lib/warden/manager.rb:34:in `call'
-rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.7) lib/rack/etag.rb:25:in `call'
-rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.7) lib/rack/head.rb:12:in `call'
-actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-05-15 11:40:29 +0300
-  
-ActionController::RoutingError (uninitialized constant MainController):
-  
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
-bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
-remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
-warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
-warden (1.2.8) lib/warden/manager.rb:34:in `catch'
-warden (1.2.8) lib/warden/manager.rb:34:in `call'
-rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.7) lib/rack/etag.rb:25:in `call'
-rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.7) lib/rack/head.rb:12:in `call'
-actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-05-15 11:41:54 +0300
-  
-AbstractController::ActionNotFound (The action 'index' could not be found for HomeController):
-  
-actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
-actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
-actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
-actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
-remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
-warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
-warden (1.2.8) lib/warden/manager.rb:34:in `catch'
-warden (1.2.8) lib/warden/manager.rb:34:in `call'
-rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.7) lib/rack/etag.rb:25:in `call'
-rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.7) lib/rack/head.rb:12:in `call'
-actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-05-15 11:42:17 +0300
-Processing by HomeController#index as HTML
-Completed 406 Not Acceptable in 215ms
-
-
-  
-ActionController::UnknownFormat (HomeController#index is missing a template for this request format and variant.
-
-request.formats: ["text/html"]
-request.variant: []
-
-NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
-actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
-actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
-actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
-actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
-actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
-actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
-actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
-activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
-actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
-actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
-actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
-activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
-activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
-activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
-actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
-actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
-actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
-actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
-actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
-actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
-remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
-warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
-warden (1.2.8) lib/warden/manager.rb:34:in `catch'
-warden (1.2.8) lib/warden/manager.rb:34:in `call'
-rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.7) lib/rack/etag.rb:25:in `call'
-rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.7) lib/rack/head.rb:12:in `call'
-actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-05-15 11:42:42 +0300
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.9ms)
-Completed 500 Internal Server Error in 182ms
-
-
-  
-ActionView::Template::Error (couldn't find file 'activestorage' with type 'application/javascript'
-Checked in these paths: 
-  /home/ivan-devops/Project/webmil_test/app/assets/config
-  /home/ivan-devops/Project/webmil_test/app/assets/images
-  /home/ivan-devops/Project/webmil_test/app/assets/javascripts
-  /home/ivan-devops/Project/webmil_test/app/assets/stylesheets
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/assets/images
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/assets/stylesheets
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/vendor/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/vendor/assets/stylesheets
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/remotipart-1.4.2/vendor/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/nested_form-0.3.2/vendor/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/jquery-ui-rails-6.0.1/app/assets/images
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/jquery-ui-rails-6.0.1/app/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/jquery-ui-rails-6.0.1/app/assets/stylesheets
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.5/app/assets/fonts
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.5/app/assets/stylesheets
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
-  /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
-  /home/ivan-devops/Project/webmil_test/node_modules):
-     5:     <%= csrf_meta_tags %>
-     6:     <%= csp_meta_tag %>
-     7: 
-     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    10:   </head>
-    11: 
-  
-app/assets/javascripts/application.js:14
-app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4506233514528490364_70037604926180'
-Started GET "/" for ::1 at 2019-05-15 11:43:26 +0300
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (8.2ms)
-Completed 200 OK in 1966ms (Views: 1944.4ms)
-
-
-Started GET "/" for ::1 at 2019-05-28 10:50:35 +0300
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (64.5ms)
-Completed 500 Internal Server Error in 112ms
-
-
-  
-ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
-    1: <h1>Hello, Ruby!</h1>
-    2: <p>This is Webmil test work!</p>
-    3: 
-    4: <%= simple_form_for @user do |f| %>
-    5:   <%= f.input :username %>
-    6:   <%= f.input :password %>
-    7:   <%= f.button :submit %>
-  
-app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb___2369850781482387120_47218442318800'
-Started GET "/" for ::1 at 2019-05-28 10:53:19 +0300
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (3.6ms)
-Completed 500 Internal Server Error in 942ms
-
-
-  
-ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
-    10:   </head>
-    11: 
-    12:   <body>
-    13:   <%= simple_form_for @user do |f| %>
-    14:   <%= f.input :username %>
-    15:   <%= f.input :password %>
-    16:   <%= f.button :submit %>
-  
-app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__81021921003214012_46924590155360'
-Started GET "/" for ::1 at 2019-05-29 11:49:43 +0300
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (28.8ms)
-Completed 200 OK in 7782ms (Views: 7731.2ms)
-
-
-Started GET "/admin" for ::1 at 2019-05-29 11:50:03 +0300
-  
-ActionController::RoutingError (No route matches [GET] "/admin"):
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -825,144 +29,331 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/users/sign_in" for ::1 at 2019-05-29 11:50:14 +0300
+Started GET "/" for ::1 at 2019-06-03 15:00:13 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (5.9ms)
+Completed 200 OK in 44ms (Views: 13.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 15:21:08 +0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-06-03 15:21:35 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2019-06-03 15:25:02 +0300
+  
+NoMethodError (undefined method `devise' for User:Class):
+  
+app/models/user.rb:5:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2019-06-03 15:25:58 +0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2019-06-03 15:26:27 +0300
 Processing by Devise::SessionsController#new as HTML
   Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (3.4ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (725.2ms)
-Completed 200 OK in 845ms (Views: 807.7ms)
-
-
-Started POST "/users/sign_in" for ::1 at 2019-05-29 11:50:21 +0300
-Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dppTKyYfcjAnlNpa7sIbbLQkkvuMrfroZ9NaLhsLh89Acva8AKRoDAoyvXwwG10XAh2URfQSq9lA1DnyAnsjNg==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
-MONGODB | Topology type 'unknown' initializing.
-MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
-MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
-MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
-MONGODB | Server localhost:27017 initializing.
-MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x69951706171080 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x69951706100440 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-05-29 08:50:21 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.00648517>>
-MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
-MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
-MONGODB | Topology type 'Unknown' changed to type 'Single'.
-MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x69951706042080 type=uuid data=0xae395b569fcf4fc8...>}}
-MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.049s
-Completed 401 Unauthorized in 560ms
-
-
+  Rendered devise/shared/_links.html.erb (3.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (252.8ms)
+Started GET "/users/sign_in" for ::1 at 2019-06-03 15:26:37 +0300
 Processing by Devise::SessionsController#new as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dppTKyYfcjAnlNpa7sIbbLQkkvuMrfroZ9NaLhsLh89Acva8AKRoDAoyvXwwG10XAh2URfQSq9lA1DnyAnsjNg==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
   Rendering devise/sessions/new.html.erb within layouts/application
   Rendered devise/shared/_links.html.erb (2.7ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (27.1ms)
-Completed 200 OK in 310ms (Views: 90.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (303.6ms)
+Completed 200 OK in 36060ms (Views: 36035.4ms | MongoDB: 0.0ms)
 
 
-Started GET "/users/sign_up" for ::1 at 2019-05-29 11:50:30 +0300
-Processing by Devise::RegistrationsController#new as HTML
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (10.6ms)
-  Rendered devise/registrations/new.html.erb within layouts/application (76.6ms)
-Completed 200 OK in 178ms (Views: 175.0ms)
+Completed 200 OK in 26298ms (Views: 26289.5ms | MongoDB: 0.0ms)
 
 
-Started POST "/users" for ::1 at 2019-05-29 11:50:44 +0300
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LbVcpsGXwTjVDs8mFy9+opPl24LLVns5vO0Z3JyBs20bXfkx5yzbBPioqADJ9jjZJdzdPLPpKgib6noAhfEXlA==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
-MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x69951706042080 type=uuid data=0xae395b569fcf4fc8...>}}
-MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (4.0ms)
-  Rendered devise/registrations/new.html.erb within layouts/application (39.2ms)
-Completed 200 OK in 439ms (Views: 133.9ms)
-
-
-Started GET "/users/sign_in" for ::1 at 2019-05-29 11:50:49 +0300
-Processing by Devise::SessionsController#new as HTML
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (5.0ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (50.1ms)
-Completed 200 OK in 138ms (Views: 135.1ms)
-
-
-Started POST "/users/sign_in" for ::1 at 2019-05-29 11:50:56 +0300
+Started POST "/users/sign_in" for ::1 at 2019-06-03 15:27:15 +0300
 Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rzXza2d4ABXpqmTUSLtvHRJwh8gURaYBJTp2qEcbkqUZlGywAsadwbs/NRqLHZdRC8xtbMDt4WS+3NvbPV4IQg==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x69951706042080 type=uuid data=0xae395b569fcf4fc8...>}}
-MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
-Redirected to http://localhost:3000/
-Completed 302 Found in 291ms
-
-
-Started GET "/" for ::1 at 2019-05-29 11:50:56 +0300
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.8ms)
-Completed 200 OK in 65ms (Views: 62.7ms)
-
-
-MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69951706042080 type=uuid data=0xae395b569fcf4fc8...>}]}
-MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.002s
-Started GET "/" for ::1 at 2019-05-29 12:00:04 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (1.9ms)
-Started GET "/" for ::1 at 2019-05-29 12:00:13 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (0.9ms)
-Completed 200 OK in 16023ms (Views: 16005.3ms)
-
-
-Completed 200 OK in 11906ms (Views: 11902.9ms)
-
-
-Started GET "/" for ::1 at 2019-05-29 12:02:51 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (1.6ms)
-Completed 200 OK in 113ms (Views: 109.9ms)
-
-
-Started GET "/users/sign_up" for ::1 at 2019-05-29 12:02:54 +0300
-Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VCN7r0TpmXIj8Tv75vSH8wqG12IgPpQ7a/j0AhcAlifFDBHvZ3qOzh0AXbTsxzG/1BOGeB1k/5w7EUB8403ylA==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
 MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
 MONGODB | Topology type 'unknown' initializing.
 MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
 MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
 MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
 MONGODB | Server localhost:27017 initializing.
-MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70079833614880 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70079833551860 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-05-29 09:02:55 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.006970243>>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70307356813720 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70307283435060 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 12:27:16 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.638960747>>
 MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
 MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
 MONGODB | Topology type 'Unknown' changed to type 'Single'.
-MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cebdeff2454651b2ad1c929')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
-MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_new_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70307283427820 type=uuid data=0x60deea1ce1f54b9d...>}}
+MONGODB | localhost:27017 | webmil_test_new_development.find | SUCCEEDED | 0.145s
+Completed 401 Unauthorized in 855ms (MongoDB: 0.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VCN7r0TpmXIj8Tv75vSH8wqG12IgPpQ7a/j0AhcAlifFDBHvZ3qOzh0AXbTsxzG/1BOGeB1k/5w7EUB8403ylA==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 350ms (Views: 102.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-06-03 15:27:19 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 119ms (Views: 115.9ms | MongoDB: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-06-03 15:27:30 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKX6ZdhX0Bm6yslCuOsdbXWWjc4nWsAU+XglW82/3JnO8dGWOl6sTYsiTEh/1Zm7Cn6J/nAUH0tcEaITDxLmuA==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+MONGODB | localhost:27017 | webmil_test_new_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70307283427820 type=uuid data=0x60deea1ce1f54b9d...>}}
+MONGODB | localhost:27017 | webmil_test_new_development.find | SUCCEEDED | 0.029s
+MONGODB | localhost:27017 | webmil_test_new_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x70307283427820 type=uuid data=0x60deea1ce1f54b9d...>}, "documents"=>[{"_id"=>BSON::ObjectId('5cf512322454652475e3fdde'), "email"=>"isavchuk99@gmail.com", "encrypted_password"=>"$2a$11...
+MONGODB | localhost:27017 | webmil_test_new_development.insert | SUCCEEDED | 0.670s
+Redirected to http://localhost:3000/
+Completed 302 Found in 997ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 15:27:31 +0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2019-06-03 15:27:41 +0300
+Processing by Devise::SessionsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_new_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf512322454652475e3fdde')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70307283427820 type=uuid data=0x60deea1ce1f54b9d...>}}
+MONGODB | localhost:27017 | webmil_test_new_development.find | SUCCEEDED | 0.097s
 Redirected to http://localhost:3000/
 Filter chain halted as :require_no_authentication rendered or redirected
-Completed 302 Found in 50ms
+Completed 302 Found in 109ms (MongoDB: 0.1ms)
 
 
-Started GET "/" for ::1 at 2019-05-29 12:02:55 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (1.2ms)
-Completed 200 OK in 83ms (Views: 80.7ms)
-
-
-Started GET "/" for ::1 at 2019-05-29 12:05:51 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (2.8ms)
-Completed 200 OK in 114ms (Views: 96.2ms)
-
-
-Started GET "/users/sign_out" for ::1 at 2019-05-29 12:05:54 +0300
+Started GET "/" for ::1 at 2019-06-03 15:27:41 +0300
   
-ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+ActionController::RoutingError (uninitialized constant HomeController):
   
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -989,161 +380,303 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/users/sign_out" for ::1 at 2019-05-29 12:06:49 +0300
-  
-ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
-  
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-05-29 12:06:54 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (1.6ms)
-Completed 200 OK in 117ms (Views: 113.3ms)
-
-
-Started DELETE "/users/sign_out" for ::1 at 2019-05-29 12:06:57 +0300
-Processing by Devise::SessionsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"xvrg+yVXLQuwtk5A3D5O3BYh2w1TDz3g1cfvEQOGchB3LtJMDQbSdws5ACG/4ESqZh2X3JJIH2rmdiWV6epWEw=="}
-MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cebdeff2454651b2ad1c929')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
-MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.002s
-MONGODB | localhost:27017 | my_db.update | STARTED | {"update"=>"users", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('5cebdeff2454651b2ad1c929')}, "u"=>{"$set"=>{"remember_created_at"=>nil}}, "multi"=>fal...
-MONGODB | localhost:27017 | my_db.update | SUCCEEDED | 0.002s
-Redirected to http://localhost:3000/
-Completed 302 Found in 58ms
-
-
-Started GET "/" for ::1 at 2019-05-29 12:06:57 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (1.9ms)
-Completed 200 OK in 75ms (Views: 72.6ms)
-
-
-Started GET "/users/sign_up" for ::1 at 2019-05-29 12:07:00 +0300
-Processing by Devise::RegistrationsController#new as HTML
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (2.7ms)
-  Rendered devise/registrations/new.html.erb within layouts/application (78.8ms)
-Completed 200 OK in 174ms (Views: 161.4ms)
-
-
-Started POST "/users" for ::1 at 2019-05-29 12:07:11 +0300
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mIdx008SzMKfRCwMRkknS9Gkhb2NL35mr7NIvcvYkYzqCRGN7+xhXSXzPP/r/ozquw9ULmdwyBR5bpN6okCwag==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
-MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
-MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.002s
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (2.3ms)
-  Rendered devise/registrations/new.html.erb within layouts/application (28.8ms)
-Completed 200 OK in 500ms (Views: 131.8ms)
-
-
-Started POST "/users" for ::1 at 2019-05-29 12:07:30 +0300
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o0WratJOzBsGVuW/bpzdjRLSNe3zem/DOuTHda0/F/qUuvqbYBsxbGiq5HU0Y/KpRp0DAcJX31JDbq5kT8dqGA==", "user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
-MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"test1@gmail.com"}, "projection"=>{"_id"=>1}, "limit"=>1, "$readPreference"=>{"mode"=>"primary"}, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
-MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
-MONGODB | localhost:27017 | my_db.insert | STARTED | {"insert"=>"users", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}, "documents"=>[{"_id"=>BSON::ObjectId('5cee4bd32454650ebcbfb967'), "email"=>"test1@gmail.com", "encrypted_password"=>"$2a$11$74aS...
-MONGODB | localhost:27017 | my_db.insert | SUCCEEDED | 0.001s
-Redirected to http://localhost:3000/
-Completed 302 Found in 281ms
-
-
-Started GET "/" for ::1 at 2019-05-29 12:07:31 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (1.4ms)
-Completed 200 OK in 89ms (Views: 85.3ms)
-
-
-Started DELETE "/users/sign_out" for ::1 at 2019-05-29 12:07:38 +0300
-Processing by Devise::SessionsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"sc6SBztndcvwbyl/t9U6xmBwsP9Ot+cwxAuclaUrg6CGMcP2iTKIvJ6TKLXtKhXiND+GE3+aV6G9gfWER9P+Qg=="}
-MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cee4bd32454650ebcbfb967')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
-MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
-Redirected to http://localhost:3000/
-Completed 302 Found in 17ms
-
-
-Started GET "/" for ::1 at 2019-05-29 12:07:38 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (1.4ms)
-Completed 200 OK in 88ms (Views: 85.8ms)
-
-
-Started GET "/" for ::1 at 2019-05-29 12:08:52 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (1.5ms)
-Completed 200 OK in 78ms (Views: 75.9ms)
-
-
-Started GET "/users/sign_in" for ::1 at 2019-05-29 12:08:55 +0300
+Started GET "/users/sign_in" for ::1 at 2019-06-03 15:27:49 +0300
 Processing by Devise::SessionsController#new as HTML
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (3.1ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (95.7ms)
-Completed 200 OK in 181ms (Views: 178.4ms)
-
-
-Started POST "/users/sign_in" for ::1 at 2019-05-29 12:09:02 +0300
-Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CqypWmOg5jycmUS6jIe14TlyOAEe66/8xrVuPxodGNdbhQpfWb6OhUE5YVhhqVgps2PoFLDHESdxji23xFC7dQ==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
-MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_new_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf512322454652475e3fdde')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70307283427820 type=uuid data=0x60deea1ce1f54b9d...>}}
+MONGODB | localhost:27017 | webmil_test_new_development.find | SUCCEEDED | 0.003s
 Redirected to http://localhost:3000/
-Completed 302 Found in 262ms
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 40ms (MongoDB: 0.0ms)
 
 
-Started GET "/" for ::1 at 2019-05-29 12:09:02 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (1.6ms)
-Completed 200 OK in 64ms (Views: 62.0ms)
+Started GET "/" for ::1 at 2019-06-03 15:27:49 +0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-06-03 15:28:09 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:4:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2019-06-03 15:28:28 +0300
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.4) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.3) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70307283427820 type=uuid data=0x60deea1ce1f54b9d...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.067s
+Started GET "/" for ::1 at 2019-06-03 15:33:40 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 10558ms (Views: 10534.4ms | MongoDB: 0.0ms)
 
 
-Started DELETE "/users/sign_out" for ::1 at 2019-05-29 12:09:06 +0300
-Processing by Devise::SessionsController#destroy as HTML
-  Parameters: {"authenticity_token"=>"GDvRB0hvKfvQKg289nUWOn/hDuNMOccxvVeLz/zavxZswAVyWT2NgUpmr4IWuFh20H+vQ8q0Odkm8T3SnG7EKQ=="}
-MONGODB | localhost:27017 | my_db.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cebdeff2454651b2ad1c929')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}}
-MONGODB | localhost:27017 | my_db.find | SUCCEEDED | 0.001s
+Started GET "/users/sign_out" for ::1 at 2019-06-03 15:34:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2019-06-03 15:34:22 +0300
+Processing by Devise::SessionsController#new as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x69855026178320 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x69855026204540 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 12:34:22 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.004499691>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_new_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf512322454652475e3fdde')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x69855019118180 type=uuid data=0x85f6c9b8c4654557...>}}
+MONGODB | localhost:27017 | webmil_test_new_development.find | SUCCEEDED | 0.003s
 Redirected to http://localhost:3000/
-Completed 302 Found in 10ms
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 89ms (MongoDB: 0.0ms)
 
 
-Started GET "/" for ::1 at 2019-05-29 12:09:06 +0300
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (1.5ms)
-Completed 200 OK in 88ms (Views: 85.5ms)
+Started GET "/" for ::1 at 2019-06-03 15:34:22 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 80ms (Views: 77.4ms | MongoDB: 0.0ms)
 
 
-MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70079833519960 type=uuid data=0x8ccbaf9e43bb4ab8...>}]}
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69855019118180 type=uuid data=0x85f6c9b8c4654557...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/" for ::1 at 2019-06-03 15:38:04 +0300
+  
+ActionController::RoutingError (undefined method `before_action' for ActionController:Module):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/users/sign_in" for ::1 at 2019-06-03 15:38:18 +0300
+  
+ActionController::RoutingError (undefined method `before_action' for ActionController:Module):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+Started GET "/users/sign_in" for ::1 at 2019-06-03 15:38:38 +0300
+  
+SyntaxError (/home/ivan-devops/Project/webmil_test_new/app/controllers/application_controller.rb:3: syntax error, unexpected end-of-input):
+  
+app/controllers/application_controller.rb:3: syntax error, unexpected end-of-input
+Started GET "/" for ::1 at 2019-06-03 15:38:47 +0300
+  
+SyntaxError (/home/ivan-devops/Project/webmil_test_new/app/controllers/application_controller.rb:3: syntax error, unexpected end-of-input):
+  
+app/controllers/application_controller.rb:3: syntax error, unexpected end-of-input
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2019-06-03 15:39:04 +0300
+  
+SyntaxError (/home/ivan-devops/Project/webmil_test_new/app/controllers/application_controller.rb:2: syntax error, unexpected end-of-input):
+  
+app/controllers/application_controller.rb:2: syntax error, unexpected end-of-input
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2019-06-03 15:39:06 +0300
+  
+SyntaxError (/home/ivan-devops/Project/webmil_test_new/app/controllers/application_controller.rb:2: syntax error, unexpected end-of-input):
+  
+app/controllers/application_controller.rb:2: syntax error, unexpected end-of-input
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/users/sign_in" for ::1 at 2019-06-03 15:39:11 +0300
+  
+SyntaxError (/home/ivan-devops/Project/webmil_test_new/app/controllers/application_controller.rb:2: syntax error, unexpected end-of-input):
+  
+app/controllers/application_controller.rb:2: syntax error, unexpected end-of-input
+Started GET "/users/sign_in" for ::1 at 2019-06-03 15:39:37 +0300
+Processing by Devise::SessionsController#new as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47023141639380 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47023141629400 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-03 12:39:37 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.005846533>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_new_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf512322454652475e3fdde')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47023141604680 type=uuid data=0x09546bfb5a2d48be...>}}
+MONGODB | localhost:27017 | webmil_test_new_development.find | SUCCEEDED | 0.002s
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 43ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 15:39:37 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_new_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf512322454652475e3fdde')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47023141604680 type=uuid data=0x09546bfb5a2d48be...>}}
+MONGODB | localhost:27017 | webmil_test_new_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 1136ms (Views: 1118.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-06-03 15:51:28 +0300
+Processing by Devise::RegistrationsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_new_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf512322454652475e3fdde')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47023141604680 type=uuid data=0x09546bfb5a2d48be...>}}
+MONGODB | localhost:27017 | webmil_test_new_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 13ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-03 15:51:28 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_new_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf512322454652475e3fdde')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47023141604680 type=uuid data=0x09546bfb5a2d48be...>}}
+MONGODB | localhost:27017 | webmil_test_new_development.find | SUCCEEDED | 0.001s
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 94ms (Views: 75.8ms | MongoDB: 0.0ms)
+
+
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47023141604680 type=uuid data=0x09546bfb5a2d48be...>}]}
 MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
