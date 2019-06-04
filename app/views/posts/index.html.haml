@@ -3,7 +3,7 @@
 %table
   %thead
     %tr
-      %th Title
+      %th Link
       %th Body
       %th User
       %th
@@ -13,7 +13,8 @@
   %tbody
     - @posts.each do |post|
       %tr
-        %td= post.title
+        %td
+          = link_to nil, post.title, @post
         %td= post.body
         %td= post.user.username
         %td= link_to 'Show', post
