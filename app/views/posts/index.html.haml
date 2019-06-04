@@ -1,10 +1,21 @@
 %h1 Listing posts
 
+- if current_user.admin
+  = link_to 'ADMIN PANEL', rails_admin.dashboard_path
+%br
+%br
+
+= link_to 'New Post', new_post_path
+\|
+= link_to 'Sign Out', destroy_user_session_path, method: :delete 
+ 
+%br
+%br
 %table
   %thead
     %tr
       %th Link
-      %th Body
+      %th Description
       %th User
       %th
       %th
@@ -22,9 +33,3 @@
           %td= link_to 'Edit', edit_post_path(post)
           %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
 %br
-
-= link_to 'New Post', new_post_path
-\|
-= link_to 'Sign Out', destroy_user_session_path, method: :delete 
-\| 
-= link_to 'Admin panel', rails_admin.dashboard_path  

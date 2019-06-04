@@ -9275,3 +9275,1635 @@ Completed 200 OK in 170ms (Views: 156.5ms | MongoDB: 0.0ms)
 
 MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47287462773640 type=uuid data=0x0c503965a4ac4456...>}]}
 MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/posts" for ::1 at 2019-06-04 19:50:45 +0300
+Processing by PostsController#index as HTML
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47316321561040 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47316321550560 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-06-04 16:50:45 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.007113525>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (82.9ms)
+Completed 200 OK in 1292ms (Views: 1210.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8/edit" for ::1 at 2019-06-04 19:50:51 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (44.5ms)
+  Rendered posts/edit.html.haml within layouts/application (52.4ms)
+Completed 200 OK in 156ms (Views: 129.0ms | MongoDB: 0.0ms)
+
+
+Started PATCH "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-04 19:51:10 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0rgQKYyXr5a52gPDM8CtkJPVU7ZJpDmZcH8pBLPHJDePI8arx1sLmfNjzCEV9f8nHawkLgp0aOmMfvYAhq0DDA==", "post"=>{"title"=>"https://rubygems.org/", "body"=>"Ruby Gems"}, "commit"=>"Update Post", "id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.update | STARTED | {"update"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "u"=>{"$set"=>{"title"=>"https://rubygems.org/", "body"=>...
+MONGODB | localhost:27017 | webmil_test_development.update | SUCCEEDED | 0.003s
+Redirected to http://localhost:3000/posts/5cf52aca2454653b05c810d8
+Completed 302 Found in 55ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-04 19:51:10 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (20.1ms)
+Completed 200 OK in 125ms (Views: 105.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:51:12 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.005s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+  Rendered posts/index.html.haml within layouts/application (74.2ms)
+Completed 200 OK in 155ms (Views: 137.9ms | MongoDB: 0.0ms)
+
+
+Started DELETE "/posts/5cf5414c24546544f6f450c1" for ::1 at 2019-06-04 19:51:48 +0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"npqQeTkpqFPNeey6/OOoT8GWmOZsozYZKmKVpONk9OBMyjR/eAUDnOJ8AF1V1oxoJBgsJqRPFyj+dNp5rbtrjw==", "id"=>"5cf5414c24546544f6f450c1"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf5414c24546544f6f450c1')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.delete | STARTED | {"delete"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}, "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('5cf5414c24546544f6f450c1')}, "limit"=>1}]}
+MONGODB | localhost:27017 | webmil_test_development.delete | SUCCEEDED | 0.002s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 34ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:51:48 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (49.7ms)
+Completed 200 OK in 127ms (Views: 114.1ms | MongoDB: 0.0ms)
+
+
+Started DELETE "/posts/5cf65eef24546517267199cf" for ::1 at 2019-06-04 19:51:50 +0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ViBoa6IqmUj/bfwhZiwdWUshh636yf0xyC7+2PyX0z6EcMxt4wYyh9BoEMbPGTl+rq8zbTIl3AAcOLEFskhMUQ==", "id"=>"5cf65eef24546517267199cf"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf65eef24546517267199cf')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.delete | STARTED | {"delete"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}, "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('5cf65eef24546517267199cf')}, "limit"=>1}]}
+MONGODB | localhost:27017 | webmil_test_development.delete | SUCCEEDED | 0.003s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 43ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:51:51 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (52.6ms)
+Completed 200 OK in 162ms (Views: 149.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf5451924546549fd13ec21/edit" for ::1 at 2019-06-04 19:51:56 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5cf5451924546549fd13ec21"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf5451924546549fd13ec21')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (20.1ms)
+  Rendered posts/edit.html.haml within layouts/application (29.0ms)
+Completed 200 OK in 131ms (Views: 109.7ms | MongoDB: 0.0ms)
+
+
+Started PATCH "/posts/5cf5451924546549fd13ec21" for ::1 at 2019-06-04 19:52:12 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JfSAoaGH9+Tn3Lao0EhQahoAgR93ob2Mnpu3s5quXwUlrT0jddKU5ngs9nkPycLUzVjUKe04feR2XCyOaSPYMw==", "post"=>{"title"=>"https://github.com/", "body"=>"GitHub"}, "commit"=>"Update Post", "id"=>"5cf5451924546549fd13ec21"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf5451924546549fd13ec21')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.005s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.update | STARTED | {"update"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('5cf5451924546549fd13ec21')}, "u"=>{"$set"=>{"title"=>"https://github.com/", "body"=>"G...
+MONGODB | localhost:27017 | webmil_test_development.update | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts/5cf5451924546549fd13ec21
+Completed 302 Found in 56ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf5451924546549fd13ec21" for ::1 at 2019-06-04 19:52:12 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf5451924546549fd13ec21"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf5451924546549fd13ec21')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (19.5ms)
+Completed 200 OK in 127ms (Views: 98.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:52:14 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (51.9ms)
+Completed 200 OK in 149ms (Views: 134.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf5451924546549fd13ec21/edit" for ::1 at 2019-06-04 19:53:24 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5cf5451924546549fd13ec21"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf5451924546549fd13ec21')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (34.7ms)
+  Rendered posts/edit.html.haml within layouts/application (48.8ms)
+Completed 200 OK in 183ms (Views: 152.3ms | MongoDB: 0.0ms)
+
+
+Started PATCH "/posts/5cf5451924546549fd13ec21" for ::1 at 2019-06-04 19:53:28 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RV+aeJuWDQhPhr/59IKaMSg3qLOffABgaPeDrQLrnK9FBif6T8NuCtB2/ygrAwiP/2/9hQXlwAiAMBiQ8WYbmQ==", "post"=>{"title"=>"https://github.com/", "body"=>"GitHub, a subsidiary of Microsoft, is an American web-based hosting service for version control using Git. It is mostly used for computer code. It offers all of the distributed version control and source code management (SCM) functionality of Git as well as adding its own features."}, "commit"=>"Update Post", "id"=>"5cf5451924546549fd13ec21"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf5451924546549fd13ec21')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.update | STARTED | {"update"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('5cf5451924546549fd13ec21')}, "u"=>{"$set"=>{"body"=>"GitHub, a subsidiary of Microsoft...
+MONGODB | localhost:27017 | webmil_test_development.update | SUCCEEDED | 0.002s
+Redirected to http://localhost:3000/posts/5cf5451924546549fd13ec21
+Completed 302 Found in 41ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf5451924546549fd13ec21" for ::1 at 2019-06-04 19:53:28 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf5451924546549fd13ec21"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf5451924546549fd13ec21')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendered posts/show.html.haml within layouts/application (20.8ms)
+Completed 200 OK in 104ms (Views: 86.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:53:30 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.006s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (54.3ms)
+Completed 200 OK in 146ms (Views: 132.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8/edit" for ::1 at 2019-06-04 19:54:05 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (30.9ms)
+  Rendered posts/edit.html.haml within layouts/application (41.1ms)
+Completed 200 OK in 147ms (Views: 112.5ms | MongoDB: 0.0ms)
+
+
+Started PATCH "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-04 19:54:16 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/PVCma45B4tyJxwLYlTL7V+Fj1lmOKyNUqktbpdwJb2hbpQb5fWjhDie0+lEYZla0fz4wSXo/f2uqPJqohoChg==", "post"=>{"title"=>"https://rubygems.org/", "body"=>"RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a \"gem\"), a tool designed to easily manage the installation of gems, and a server for distributing them. It was created by Chad Fowler and Richard Kilmer during RubyConf 2004."}, "commit"=>"Update Post", "id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.update | STARTED | {"update"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "u"=>{"$set"=>{"body"=>"RubyGems is a package manager for...
+MONGODB | localhost:27017 | webmil_test_development.update | SUCCEEDED | 0.004s
+Redirected to http://localhost:3000/posts/5cf52aca2454653b05c810d8
+Completed 302 Found in 86ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-04 19:54:16 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 110ms (Views: 90.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:54:22 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendered posts/index.html.haml within layouts/application (47.8ms)
+Completed 200 OK in 132ms (Views: 119.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:56:13 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (51.0ms)
+Completed 200 OK in 155ms (Views: 134.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-04 19:56:32 +0300
+Processing by PostsController#new as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/new.html.haml within layouts/application
+  Rendered posts/_form.html.haml (29.1ms)
+  Rendered posts/new.html.haml within layouts/application (42.8ms)
+Completed 200 OK in 164ms (Views: 148.6ms | MongoDB: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-04 19:58:01 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CMX5C+4kxSEwmZh9FZBUkFNEpFVXTHyAeClxiqB1BXnz1myXpOoKHomzyX89/TZWRmHRRcK7WegtpKcy/2SPzQ==", "post"=>{"title"=>"https://en.wikipedia.org/", "body"=>"Wikipedia  is a multilingual online encyclopedia, based on open collaboration through a model of web-based content editing called wiki. It is the largest and most popular general reference work on the World Wide Web, and is one of the most popular websites by Alexa rank as of April 2019. It features exclusively free content and no commercial ads, and is owned and supported by the Wikimedia Foundation, a non-profit organization funded primarily through donations."}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | webmil_test_development.insert | STARTED | {"insert"=>"posts", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}, "documents"=>[{"_id"=>BSON::ObjectId('5cf6a31924546533f5934871'), "title"=>"https://en.wikipedia.org/", "body"=>"Wikipedia  is a...
+MONGODB | localhost:27017 | webmil_test_development.insert | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts/5cf6a31924546533f5934871
+Completed 302 Found in 24ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf6a31924546533f5934871" for ::1 at 2019-06-04 19:58:01 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf6a31924546533f5934871"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf6a31924546533f5934871')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (18.8ms)
+Completed 200 OK in 123ms (Views: 103.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:58:03 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (55.5ms)
+Completed 200 OK in 156ms (Views: 140.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf6a31924546533f5934871/edit" for ::1 at 2019-06-04 19:58:06 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5cf6a31924546533f5934871"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf6a31924546533f5934871')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (23.3ms)
+  Rendered posts/edit.html.haml within layouts/application (37.0ms)
+Completed 200 OK in 152ms (Views: 127.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:58:08 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.007s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+  Rendered posts/index.html.haml within layouts/application (257.8ms)
+Completed 200 OK in 410ms (Views: 373.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:58:43 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.005s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (60.7ms)
+Completed 200 OK in 170ms (Views: 149.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:58:50 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (51.1ms)
+Completed 200 OK in 133ms (Views: 116.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:59:02 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (71.5ms)
+Completed 200 OK in 161ms (Views: 150.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 19:59:36 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendered posts/index.html.haml within layouts/application (62.3ms)
+Completed 200 OK in 151ms (Views: 134.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-04 19:59:40 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (22.4ms)
+Completed 200 OK in 132ms (Views: 109.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-04 20:01:07 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (41.3ms)
+Completed 200 OK in 659ms (Views: 608.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:01:10 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (63.8ms)
+Completed 200 OK in 163ms (Views: 147.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:02:50 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (65.6ms)
+Completed 200 OK in 270ms (Views: 251.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:03:35 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (50.2ms)
+Completed 200 OK in 155ms (Views: 141.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:03:39 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.006s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+  Rendered posts/index.html.haml within layouts/application (79.3ms)
+Completed 200 OK in 303ms (Views: 285.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-04 20:03:50 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.010s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (27.0ms)
+Completed 200 OK in 134ms (Views: 95.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:03:52 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (61.8ms)
+Completed 200 OK in 212ms (Views: 190.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8/edit" for ::1 at 2019-06-04 20:03:53 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (17.7ms)
+  Rendered posts/edit.html.haml within layouts/application (26.7ms)
+Completed 200 OK in 125ms (Views: 98.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:03:59 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (67.2ms)
+Completed 200 OK in 190ms (Views: 172.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2019-06-04 20:04:05 +0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.count | STARTED | {"count"=>"posts", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.count | STARTED | {"count"=>"users", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.count | SUCCEEDED | 0.001s
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (45.5ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (11.5ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (30.0ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (9.8ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (48.7ms)
+Completed 200 OK in 3041ms (Views: 1850.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2019-06-04 20:04:08 +0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.count | STARTED | {"count"=>"posts", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.count | STARTED | {"count"=>"users", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.count | SUCCEEDED | 0.001s
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (43.9ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (13.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (31.3ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (11.6ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (13.3ms)
+Completed 200 OK in 501ms (Views: 461.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2019-06-04 20:04:59 +0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.count | STARTED | {"count"=>"posts", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.count | STARTED | {"count"=>"users", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.count | SUCCEEDED | 0.002s
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (35.6ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (10.0ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (27.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (11.1ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (14.1ms)
+Completed 200 OK in 574ms (Views: 541.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-04 20:05:02 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 17ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:05:02 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.007s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendered posts/index.html.haml within layouts/application (64.9ms)
+Completed 200 OK in 253ms (Views: 239.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-04 20:05:09 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 16ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:05:09 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (60.4ms)
+Completed 200 OK in 148ms (Views: 134.6ms | MongoDB: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-06-04 20:05:12 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rq3IIj6LnNoxfPnXAMwkcNZt9MnlRrlLuqqbVuepYvR8/Wwkf6c3FR55FTCp+QBXM+NACS2qmHpuvNSLqXb9mw=="}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 99ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-04 20:05:12 +0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 10ms (MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-06-04 20:05:12 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (77.2ms)
+Completed 200 OK in 183ms (Views: 166.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-06-04 20:05:29 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ii/NhSmU7jc72P+VhD4CLHGIbFskC93X8/Obezsmw17XSfPqRsEiYg1gNKyG+bPI+BQh9ftul7YLtb5t3h7V2Q==", "user"=>{"email"=>"Jhon07@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"jhon07@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 462ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-04 20:05:29 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 16ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:05:29 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (47.0ms)
+Completed 200 OK in 149ms (Views: 131.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2019-06-04 20:05:35 +0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Filter chain halted as :_authorize! rendered or redirected
+Completed 302 Found in 15ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-04 20:05:35 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 19ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:05:35 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (50.9ms)
+Completed 200 OK in 137ms (Views: 126.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2019-06-04 20:05:37 +0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Filter chain halted as :_authorize! rendered or redirected
+Completed 302 Found in 23ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-04 20:05:37 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 11ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:05:37 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (58.5ms)
+Completed 200 OK in 191ms (Views: 147.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2019-06-04 20:05:38 +0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Filter chain halted as :_authorize! rendered or redirected
+Completed 302 Found in 26ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-04 20:05:38 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 11ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:05:38 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (50.0ms)
+Completed 200 OK in 137ms (Views: 124.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:06:10 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (63.8ms)
+Completed 200 OK in 173ms (Views: 160.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:06:35 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 42ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     9: %br
+    10: %br
+    11: %table
+    12:   %thead
+    13:     %tr
+    14:       %th Link
+    15:       %th Description
+  
+app/views/posts/index.html.haml:12
+Started GET "/posts" for ::1 at 2019-06-04 20:06:52 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 26ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     8: %br
+     9: %br
+    10: %table
+    11:   %thead
+    12:     %tr
+    13:       %th Link
+    14:       %th Description
+  
+app/views/posts/index.html.haml:11
+Started GET "/posts" for ::1 at 2019-06-04 20:06:57 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+  Rendered posts/index.html.haml within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 32ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     8: %br
+     9: %br
+    10: %table
+    11:   %thead
+    12:     %tr
+    13:       %th Link
+    14:       %th Description
+  
+app/views/posts/index.html.haml:11
+Started GET "/posts" for ::1 at 2019-06-04 20:07:07 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (95.0ms)
+Completed 200 OK in 223ms (Views: 207.3ms | MongoDB: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-06-04 20:07:11 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y/8PJPwXlDAacyIXmc7P+owF3WjaXiobh6dE+nNQ/Xnu+coqemri7BxsJrr0D8BFwI0a0KKw5L2tx4uNpM318g=="}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf527e424546537599423d7')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-04 20:07:11 +0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (MongoDB: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-06-04 20:07:11 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 125ms (Views: 121.4ms | MongoDB: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-06-04 20:07:16 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EpKXcCzJ2pfaV8Gp/uHSvQpr/+AbqGb01XqH6VbS4UY6yZjcsr22BFpcvk50RlwAV51l9okEyebPHjku9KH9dQ==", "user"=>{"email"=>"isavchuk99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"isavchuk99@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/
+Completed 302 Found in 251ms (MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-04 20:07:16 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 9ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:07:16 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (55.4ms)
+Completed 200 OK in 165ms (Views: 145.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:07:26 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (70.5ms)
+Completed 200 OK in 184ms (Views: 154.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:07:59 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (71.8ms)
+Completed 200 OK in 177ms (Views: 155.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:08:28 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (69.2ms)
+Completed 200 OK in 163ms (Views: 150.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:08:51 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (63.9ms)
+Completed 200 OK in 161ms (Views: 141.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:09:17 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (89.7ms)
+Completed 200 OK in 207ms (Views: 176.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:09:30 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (59.4ms)
+Completed 200 OK in 171ms (Views: 151.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:09:36 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (64.8ms)
+Completed 200 OK in 157ms (Views: 147.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:09:42 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (57.0ms)
+Completed 200 OK in 151ms (Views: 132.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2019-06-04 20:10:11 +0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.count | STARTED | {"count"=>"posts", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.count | STARTED | {"count"=>"users", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.count | SUCCEEDED | 0.001s
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (49.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (12.6ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (45.8ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (14.4ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (20.1ms)
+Completed 200 OK in 578ms (Views: 538.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2019-06-04 20:10:11 +0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.count | STARTED | {"count"=>"posts", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.count | STARTED | {"count"=>"users", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.count | SUCCEEDED | 0.001s
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (52.0ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (9.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (26.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (12.0ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (16.7ms)
+Completed 200 OK in 497ms (Views: 466.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-04 20:10:15 +0300
+Processing by HomeController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 14ms (MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:10:15 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.005s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (71.7ms)
+Completed 200 OK in 186ms (Views: 164.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:10:55 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (48.3ms)
+Completed 200 OK in 151ms (Views: 116.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:11:03 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (69.6ms)
+Completed 200 OK in 174ms (Views: 161.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:11:37 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (80.0ms)
+Completed 200 OK in 246ms (Views: 225.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:11:40 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (69.0ms)
+Completed 200 OK in 163ms (Views: 153.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:11:52 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (56.5ms)
+Completed 200 OK in 163ms (Views: 150.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:11:59 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendered posts/index.html.haml within layouts/application (63.8ms)
+Completed 200 OK in 191ms (Views: 179.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:12:09 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (62.7ms)
+Completed 200 OK in 267ms (Views: 247.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:12:14 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (62.5ms)
+Completed 200 OK in 155ms (Views: 138.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:12:42 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (59.3ms)
+Completed 200 OK in 292ms (Views: 275.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:12:55 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (76.1ms)
+Completed 200 OK in 167ms (Views: 149.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:13:28 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.005s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (65.0ms)
+Completed 200 OK in 156ms (Views: 135.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:13:59 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (62.5ms)
+Completed 200 OK in 180ms (Views: 161.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:14:02 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (56.3ms)
+Completed 200 OK in 209ms (Views: 197.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:14:27 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (61.5ms)
+Completed 200 OK in 237ms (Views: 220.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:14:40 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (59.3ms)
+Completed 200 OK in 220ms (Views: 202.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:14:56 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (66.5ms)
+Completed 200 OK in 250ms (Views: 234.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8" for ::1 at 2019-06-04 20:14:58 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/show.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/show.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 141ms (Views: 114.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:15:00 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.haml within layouts/application (82.3ms)
+Completed 200 OK in 217ms (Views: 197.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8/edit" for ::1 at 2019-06-04 20:15:02 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (25.6ms)
+  Rendered posts/edit.html.haml within layouts/application (40.9ms)
+Completed 200 OK in 144ms (Views: 123.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:15:07 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendered posts/index.html.haml within layouts/application (72.5ms)
+Completed 200 OK in 188ms (Views: 168.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:15:15 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendered posts/index.html.haml within layouts/application (81.6ms)
+Completed 200 OK in 237ms (Views: 213.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts/5cf52aca2454653b05c810d8/edit" for ::1 at 2019-06-04 20:15:17 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5cf52aca2454653b05c810d8"}
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('5cf52aca2454653b05c810d8')}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+  Rendering posts/edit.html.haml within layouts/application
+  Rendered posts/_form.html.haml (20.5ms)
+  Rendered posts/edit.html.haml within layouts/application (27.3ms)
+Completed 200 OK in 105ms (Views: 88.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-04 20:15:19 +0300
+Processing by PostsController#index as HTML
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+  Rendering posts/index.html.haml within layouts/application
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | webmil_test_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5cf51c6b2454652c4c915ccc')}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}}
+MONGODB | localhost:27017 | webmil_test_development.find | SUCCEEDED | 0.003s
+  Rendered posts/index.html.haml within layouts/application (57.2ms)
+Completed 200 OK in 153ms (Views: 140.0ms | MongoDB: 0.0ms)
+
+
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47316321510000 type=uuid data=0x23d861435bfc49e8...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
