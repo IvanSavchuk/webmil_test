@@ -5,7 +5,7 @@ ruby '2.5.0'
 
 gem 'mongoid', '~> 7.0', '>= 7.0.3'
 gem 'kaminari-mongoid'
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'rails_admin', '~> 1.4', '>= 1.4.2'
 gem 'simple_form', '~> 4.1'
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
